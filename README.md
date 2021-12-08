@@ -1,75 +1,59 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To-Do-List
 
-> One paragraph statement about the project.
+To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+<p align="center">
+  <img src="./app_screenshot.png"/>
+</p>
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JAVASCRIPT (ES6)
+- WEBPACK
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://chukwuemeka1234.github.io/To-do-list-1/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+some knowledge on `npm` webpack and ES6
+
 ### Setup
 
+- Clone repository
+- run `npm start`
 ### Install
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Node modules
+- HtmlWebpackPlugin `npm install --save-dev html-webpack-plugin`
+- Load CSS `npm install --save-dev style-loader css-loader`
+- Setup local dev server `npm install --save-dev webpack-dev-server`
 
 ## Authors
 
-👤 **Author1**
+👤 **Author**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@chukwuemeka1234](https://github.com/chukwuemeka1234)
+- Twitter: [@avc_victor](https://twitter.com/@avc_victor)
+- LinkedIn: [ani-chukwuemeka](https://linkedin.com/in/ani-chukwuemeka-a65421199/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

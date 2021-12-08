@@ -2,8 +2,12 @@ body {
   background-color: #fff;
 }
 
+h1 {
+    display: none;
+}
+
 .to-do-list {
-  margin: 10% 25%;
+  margin: 5% 25%;
   padding: 0;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);

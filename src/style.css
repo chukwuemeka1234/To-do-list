@@ -11,7 +11,7 @@ body {
 }
 
 p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 ul li {
@@ -35,22 +35,22 @@ ul li {
 }
 
 ul li:last-child {
-    justify-content: center;
-  }
+  justify-content: center;
+}
 
 .to-do-list button {
-    border: 0;
-    background-color: #fff;
-    margin: 16px;
-    font-size: 1.3rem;
-    color: #746d6d;
-  }
-  
-  .icons {
-    color: #746d6d;
-  }
-  
-  .icons:hover {
-    cursor: move;
-    color: #000;
-  }
+  border: 0;
+  background-color: #fff;
+  margin: 16px;
+  font-size: 1.3rem;
+  color: #746d6d;
+}
+
+.icons {
+  color: #746d6d;
+}
+
+.icons:hover {
+  cursor: move;
+  color: #000;
+}

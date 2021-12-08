@@ -1,20 +1,22 @@
 const path = require('path');
+/* eslint-disable */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-disable */
 
 module.exports = {
   mode: 'development',
-    entry: {
-        index: './src/index.js',
-      },
-      devtool: 'inline-source-map',
-      devServer: {
-        static: './dist',
-      },
-      plugins: [
-        new HtmlWebpackPlugin({
-          template: './src/index.html'
-        }),
-      ],
+  entry: {
+    index: './src/index.js',
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+  ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),

@@ -24,13 +24,11 @@ const listArray = [
 
 function displayList() {
   const heading = document.createElement('li');
-  heading.innerHTML =
-    '<p>Today\'s To do</p> <i class="fas fa-sync-alt icons"></i>';
+  heading.innerHTML = '<p>Today\'s To do</p> <i class="fas fa-sync-alt icons"></i>';
   listContainer.append(heading);
 
   const input = document.createElement('li');
-  input.innerHTML =
-    '<input class="input-text" placeholder="Add to your list..."> <i class="fas fa-plus icons"></i>';
+  input.innerHTML = '<input class="input-text" placeholder="Add to your list..."> <i class="fas fa-plus icons"></i>';
   listContainer.append(input);
 
   listArray.forEach((item) => {

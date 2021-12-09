@@ -57,3 +57,13 @@ ul li:last-child {
   cursor: move;
   color: #000;
 }
+
+.strike-through {
+  text-decoration: line-through;
+  color: #746d6d;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+}

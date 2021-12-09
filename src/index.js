@@ -1,9 +1,8 @@
 /* eslint-disable */
+import { checkBox } from './status.js';
 import './style.css';
 
-const listContainer = document.querySelector('.to-do-list');
-
-const listArray = [
+export let listArray = JSON.parse(localStorage.getItem('ListAr')) || [
   {
     index: 0,
     description: 'wash the dishes',
@@ -14,13 +13,10 @@ const listArray = [
     description: 'complete To Do list project',
     completed: false,
   },
-  {
-    index: 2,
-    description: 'do the laundry',
-    completed: false,
-  },
 ];
 /* eslint-enable */
+
+const listContainer = document.querySelector('.to-do-list');
 
 function displayList() {
   const heading = document.createElement('li');
@@ -31,17 +27,36 @@ function displayList() {
   input.innerHTML = '<input class="input-text" placeholder="Add to your list..."> <i class="fas fa-plus icons"></i>';
   listContainer.append(input);
 
-  listArray.forEach((item) => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `<p><input type="checkbox">${item.description}</p><i class="fas fa-ellipsis-v icons"></i>`;
-    listContainer.append(listItem);
-  });
+  for (let i = 0; i < listArray.length; i += 1) {
+    if (listArray[0].index === i) {
+      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
+      <i class="fas fa-ellipsis-v icons"></i>`;
+      listContainer.innerHTML += listCode;
+    } else if (listArray[1].index === i) {
+      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
+      <i class="fas fa-ellipsis-v icons"></i>`;
+      listContainer.innerHTML += listCode;
+    }
+  }
 
   const btn = document.createElement('li');
   btn.innerHTML = '<button type="button">Clear all completed</button>';
   listContainer.append(btn);
 }
 
+displayList();
+
 document.addEventListener('DOMContentLoaded', () => {
-  displayList();
+  if (listArray[0].completed === true) {
+    document.getElementById('0').classList.add('strike-through');
+    document.querySelector('.to-do-list-0').checked = true;
+  }
+
+  if (listArray[1].completed === true) {
+    document.getElementById('1').classList.add('strike-through');
+    document.querySelector('.to-do-list-1').checked = true;
+  }
+
+  const checkbox = document.querySelectorAll('.check-box');
+  checkBox(checkbox);
 });

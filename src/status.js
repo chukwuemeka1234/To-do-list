@@ -6,7 +6,7 @@ export function completed(state, description) {
   if (state) {
     description.classList.add('strike-through');
     const index = description.getAttribute('id');
-    if(Number(index) === listArray[0].index) {
+    if (Number(index) === listArray[0].index) {
       listArray[0].completed = true;
       localStorage.setItem('ListAr', JSON.stringify(listArray));
     } else if (Number(index) === listArray[1].index) {

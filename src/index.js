@@ -36,7 +36,7 @@ function displayList() {
       const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
       <i class="fas fa-ellipsis-v icons"></i>`;
       listContainer.innerHTML += listCode;
-    } 
+    }
   }
 
   const btn = document.createElement('li');
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (listArray[0].completed === true) {
     document.getElementById('0').classList.add('strike-through');
     document.querySelector('.to-do-list-0').checked = true;
-    console.log(checked);
   }
 
   if (listArray[1].completed === true) {

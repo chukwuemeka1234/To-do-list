@@ -12,9 +12,6 @@ export function completed(state, description) {
         } else if (Number(index) === listArray[1].index) {
             listArray[1].completed = true;
             localStorage.setItem('ListAr', JSON.stringify(listArray));
-        } else if(Number(index) === listArray[2].index) {
-            listArray[2].completed = true;
-            localStorage.setItem('ListAr', JSON.stringify(listArray));
         }
     }   else {
         description.classList.remove('strike-through');
@@ -24,9 +21,6 @@ export function completed(state, description) {
             localStorage.setItem('ListAr', JSON.stringify(listArray));
         }   else if (Number(index) === listArray[1].index) {
             listArray[1].completed = false;
-            localStorage.setItem('ListAr', JSON.stringify(listArray));
-        }   else if (Number(index) === listArray[2].index) {
-            listArray[2].completed = false;
             localStorage.setItem('ListAr', JSON.stringify(listArray));
         }
     }

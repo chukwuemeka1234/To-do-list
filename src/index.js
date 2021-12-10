@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   submitBtn.addEventListener('click', () => {
     const descInput = document.querySelector('.text');
     const description = descInput.value.trim();
-    if(!description) {
+    if (!description) {
       return;
     }
 

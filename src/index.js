@@ -13,6 +13,11 @@ export let listArray = JSON.parse(localStorage.getItem('ListAr')) || [
     description: 'complete To Do list project',
     completed: false,
   },
+  {
+    index: 2,
+    description: 'do the laundry',
+    completed: false,
+  },
 ];
 /* eslint-enable */
 
@@ -29,11 +34,15 @@ function displayList() {
 
   for (let i = 0; i < listArray.length; i += 1) {
     if (listArray[0].index === i) {
-      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
+      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box to-do-list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
       <i class="fas fa-ellipsis-v icons"></i>`;
       listContainer.innerHTML += listCode;
     } else if (listArray[1].index === i) {
-      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
+      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box to-do-list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
+      <i class="fas fa-ellipsis-v icons"></i>`;
+      listContainer.innerHTML += listCode;
+    } else if (listArray[2].index === i) {
+      const listCode = `<li data-id="${i}"><div id="${i}" class="task"><input class="check-box to-do-list-${i}" type="checkbox"><p>${listArray[i].description}</p></div>
       <i class="fas fa-ellipsis-v icons"></i>`;
       listContainer.innerHTML += listCode;
     }
@@ -55,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (listArray[1].completed === true) {
     document.getElementById('1').classList.add('strike-through');
     document.querySelector('.to-do-list-1').checked = true;
+  }
+
+  if (listArray[2].completed === true) {
+    document.getElementById('2').classList.add('strike-through');
+    document.querySelector('.to-do-list-2').checked = true;
   }
 
   const checkbox = document.querySelectorAll('.check-box');

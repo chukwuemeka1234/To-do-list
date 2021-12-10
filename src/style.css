@@ -78,10 +78,10 @@ ul li:last-child {
   padding-right: 5px;
 }
 
-/* .icon-d:hover {
+.icon-d:hover {
   color: orange;
   font-size: 20px;
-} */
+}
 
 .strike-through {
   text-decoration: line-through;
@@ -136,7 +136,6 @@ ul li:last-child {
   padding: 15px;
   font-size: 16px;
   width: 100%;
-  display: none;
 }
 
 .save:hover {

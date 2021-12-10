@@ -118,4 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Get edited task and update to localStorage
+  const saveBtn = document.querySelector('.save');
+  const paragraphs = document.querySelectorAll('.edit');
+  paragraphs.forEach((el) => {
+    el.addEventListener('click', () => {
+      saveBtn.addEventListener('click', () => {
+        const newInput = el.innerHTML;
+        for (let i = 0; i < listArray.length; i += 1) {
+          const parentId = el.parentElement.getAttribute('data-id');
+          if (Number(parentId - 1) === listArray[i].index) {
+            listArray[i].description = newInput;
+            localStorage.setItem('ListAr', JSON.stringify(listArray));
+          }
+        }
+      });
+    });
+  });
 });

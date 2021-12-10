@@ -5,7 +5,7 @@ import { listArray } from './index.js';
 export function completed(state, description) {
   if (state) {
     description.classList.add('strike-through');
-    const index = description.getAttribute('id');
+    const index = description.getAttribute('data-id');
     for (let i = 0; i < listArray.length; i += 1) {
       listArray[i].index = i + 1;
       if (Number(index - 1) === listArray[i].index) {
@@ -15,7 +15,7 @@ export function completed(state, description) {
     }
   } else {
     description.classList.remove('strike-through');
-    const index = description.getAttribute('id');
+    const index = description.getAttribute('data-id');
     for (let i = 0; i < listArray.length; i += 1) {
       if (Number(index - 1) === listArray[i].index) {
         listArray[i].completed = false;

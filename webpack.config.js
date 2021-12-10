@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 /* eslint-disable */
 
 module.exports = {
-  mode: 'development',
+  // mode: 'development',
   entry: {
     index: './src/index.js',
   },

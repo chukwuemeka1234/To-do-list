@@ -6,28 +6,21 @@ export function completed(state, description) {
   if (state) {
     description.classList.add('strike-through');
     const index = description.getAttribute('id');
-    if (Number(index) === listArray[0].index) {
-      listArray[0].completed = true;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
-    } else if (Number(index) === listArray[1].index) {
-      listArray[1].completed = true;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
-    } else if (Number(index) === listArray[2].index) {
-      listArray[2].completed = true;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
+    for (let i = 0; i < listArray.length; i += 1) {
+      listArray[i].index = i + 1;
+      if (Number(index - 1) === listArray[i].index) {
+        listArray[i].completed = true;
+        localStorage.setItem('ListAr', JSON.stringify(listArray));
+      }
     }
   } else {
     description.classList.remove('strike-through');
     const index = description.getAttribute('id');
-    if (Number(index) === listArray[0].index) {
-      listArray[0].completed = false;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
-    } else if (Number(index) === listArray[1].index) {
-      listArray[1].completed = false;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
-    } else if (Number(index) === listArray[2].index) {
-      listArray[2].completed = false;
-      localStorage.setItem('ListAr', JSON.stringify(listArray));
+    for (let i = 0; i < listArray.length; i += 1) {
+      if (Number(index - 1) === listArray[i].index) {
+        listArray[i].completed = false;
+        localStorage.setItem('ListAr', JSON.stringify(listArray));
+      }
     }
   }
 }

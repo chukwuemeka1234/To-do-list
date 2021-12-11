@@ -6,16 +6,47 @@ h1 {
   display: none;
 }
 
-.to-do-list {
-  margin: 5% 25%;
-  padding: 0;
+.list-container {
+  margin: 5% 25% 0 25%;
+  padding: 20px 0 0 0;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
 }
 
+.iconed,
+.sub-icon {
+  padding-right: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.sub-icon:hover {
+  font-size: 20px;
+}
+
 p {
   font-size: 1.5rem;
+  outline: none;
+  width: 100%;
+}
+
+.contain-icons {
+  display: flex;
+}
+
+.to-do-list {
+  padding: 0;
+}
+
+.text {
+  border: 0;
+  text-transform: inherit;
+  font-style: italic;
+  padding: 16px 10px;
+  padding-bottom: 16px;
+  width: 100%;
+  outline: none;
 }
 
 ul li {
@@ -26,27 +57,12 @@ ul li {
   border-bottom: 1px solid #c9bebeab;
 }
 
-.input-text {
-  border: 0;
-  text-transform: inherit;
-  font-style: italic;
-  font-size: 1.3rem;
-  padding-top: 16px;
-  padding-bottom: 16px;
+.input {
   width: 100%;
-  outline: none;
 }
 
 ul li:last-child {
   justify-content: center;
-}
-
-.to-do-list button {
-  border: 0;
-  background-color: #fff;
-  margin: 16px;
-  font-size: 1.3rem;
-  color: #746d6d;
 }
 
 .icons {
@@ -58,6 +74,15 @@ ul li:last-child {
   color: #000;
 }
 
+.icon-d {
+  padding-right: 5px;
+}
+
+.icon-d:hover {
+  color: orange;
+  font-size: 20px;
+}
+
 .strike-through {
   text-decoration: line-through;
   color: #746d6d;
@@ -66,4 +91,53 @@ ul li:last-child {
 .task {
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c9bebeab;
+  padding-bottom: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c9bebeab;
+}
+
+.to-do-list button {
+  border: 0;
+  background-color: #fff;
+  margin: 16px;
+  font-size: 16px;
+  color: #746d6d;
+}
+
+.clear-all {
+  border: none;
+  background-color: #fff;
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.clear-all:hover {
+  text-decoration: underline;
+}
+
+.save {
+  border: none;
+  background-color: #548b3b85;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.save:hover {
+  background-color: #548b3be6;
 }

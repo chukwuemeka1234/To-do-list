@@ -17,7 +17,7 @@ To-do list" is a tool that helps to organize your day. It simply lists the thing
 
 ## Live Demo
 
-[Live Demo Link](https://chukwuemeka1234.github.io/To-do-list-1/)
+[Live Demo Link](https://chukwuemeka1234.github.io/To-do-list/)
 
 
 ## Getting Started
